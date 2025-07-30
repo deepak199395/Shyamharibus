@@ -1,0 +1,91 @@
+.booking-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.booking-container::before {
+  content: "";
+  background: linear-gradient(to right, #040fd9, #23a8ef);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.booking-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1904d9;
+  font-size: 1.8rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.booking-form label {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.booking-form select {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.booking-form select:focus {
+  border-color: #232def;
+  box-shadow: 0 0 0 2px rgba(239, 35, 60, 0.2);
+}
+
+.booking-form button {
+  padding: 1rem;
+  background: #2b04d9;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.booking-form button:hover {
+  background: #1302b1;
+}
+
+/* 🎯 Responsive for mobile screens */
+@media (max-width: 600px) {
+  .booking-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .booking-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .booking-form button {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+}
