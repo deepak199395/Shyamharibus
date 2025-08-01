@@ -1,61 +1,95 @@
+/* Header Container */
 .app-header {
-  background-color: #004080;
-  color: white;
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  background-color: #004d99;
+  padding: 15px 30px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+/* Logo */
+.logo a {
+  text-decoration: none;
+  color: white;
   font-size: 1.8rem;
   font-weight: bold;
 }
 
+/* Nav Links */
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  color: #ffd700;
 }
 
-/* 📱 Mobile screens (≤ 600px) */
-@media (max-width: 600px) {
-  .app-header {
+/* Auth Links */
+.auth-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.auth-links a:hover {
+  color: #ffd700;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 25px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #004d99;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 20px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    gap: 15px;
+    z-index: 999;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-top: 0.5rem;
-    width: 100%;
+  .nav-links.active {
+    display: flex;
   }
 
-  .nav-links a {
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-/* 📱 Tablet screens (601px–900px) */
-@media (max-width: 900px) and (min-width: 601px) {
-  .logo {
-    font-size: 1.5rem;
+  .auth-links {
+    margin-top: 15px;
   }
 
-  .nav-links {
-    gap: 1rem;
+  .app-header {
+    flex-direction: row;
   }
 }

@@ -36,3 +36,6 @@
     transform: rotate(360deg);
   }
 }
+.main-content {
+  padding-top: 100px; /* enough to clear header and dropdown */
+}
