@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Layout/Header.css';
-import { FaBars, FaTimes } from 'react-icons/fa'; // hamburger & close icons
+import { FaBars, FaTimes } from 'react-icons/fa'; 
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ const Header = () => {
         <Link to="/contact" onClick={closeMenu}>Contact</Link>
         <Link to="/about" onClick={closeMenu}>About Us</Link>
         <div className="auth-links">
-          <Link to="/login" onClick={closeMenu}>Login</Link> /
+          <Link to="/LoginScreen" onClick={closeMenu}>Login</Link> /
           <Link to="/register" onClick={closeMenu}>Register</Link>
         </div>
       </div>
